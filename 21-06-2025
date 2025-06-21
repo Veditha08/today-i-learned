@@ -1,0 +1,11 @@
+HTTP Request: its a message sent by the website/app u use to the server hosting that website. after that http request is sent, u get a http response back in the form of a message/image/video anything.
+Common HTTP Methods:
+                    GET: Requests data from the server (e.g., loading a webpage or image).
+                    POST: Sends data to the server (e.g., submitting a form).
+                    PUT: Updates or creates a resource on the server.
+                    DELETE: Removes a resource from the server.
+
+
+
+Node.js --> it is a free, open-source, runtime environment for js. it helps the developers to run js outside the web browser on the server side.
+npm --> node package manager / package registry
