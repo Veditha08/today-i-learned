@@ -1,0 +1,3 @@
+webgl and ogl are graphic libraries used to create 2d and 3d graphics
+ogl is low-lvel api primarily used with cpp for desktop and embedded systems.
+webgl is a js api which enables graphics rendering in web browsers.
