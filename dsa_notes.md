@@ -11,3 +11,14 @@
 ## Space Complexity
 Always consider auxiliary space alongside time complexity.
 Memory-time tradeoff is a key consideration.
+
+## Arrays
+- Random access: O(1)
+- Search unsorted: O(n)
+- Insert at end: O(1) amortized
+- Insert at middle: O(n)
+- Two-pointer technique: for sorted arrays problems
+
+Two Pointer pattern:
+  left = 0, right = n-1
+  while left < right: process, move pointers
