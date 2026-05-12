@@ -1,0 +1,5 @@
+npm - package manager. installs packages.
+npx - for installing packages only for once just to run that app for now.
+
+example: if u want to call the plumber to fix the tap in ur house, and they say that baad mei bhi kaam ayenge toh ghar pe rkhlo inko; it is npm.
+but if u just call him whenever u want, it is npx.
