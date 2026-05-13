@@ -22,3 +22,15 @@ Memory-time tradeoff is a key consideration.
 Two Pointer pattern:
   left = 0, right = n-1
   while left < right: process, move pointers
+
+## Linked List
+- Singly: data + next pointer
+- Doubly: data + next + prev pointer
+- Insert at head: O(1)
+- Delete node: O(n) to find, O(1) to remove
+- No random access (no index)
+
+When to use:
+- Frequent insertions at beginning
+- Unknown size at compile time
+- Implementing stacks/queues
