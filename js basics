@@ -1,0 +1,11 @@
+script tag lopale src rayali
+body lopala script tag untadhi
+! enter to get html boilerplate code
+alert syntax: alert('helloooo');  ---- idhi load chesinapud or smthng like alert laga osthadhi in websites.
+
+
+  to run in chrome itself, open 3 dots -- more tools -- developer tools -- start typing in the console and enter-- the code will run there and then.
+
+in ur code editor if u type smthng in console.log(), then that will appear in the console said above.
+
+  VARIABLES: we use var,let,const. but var not much used anymore cuz var is globally scoped. let and const and block scoped.
