@@ -1,0 +1,7 @@
+getline: used to print the whole string at once.
+
+  string str;
+  getline(cin, str)
+cout << str;
+
+--> the whole line we write in the input will get printed in o/p.
