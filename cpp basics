@@ -20,3 +20,13 @@ STACK IS LIFO
 QUEUE IS FIFO
 
 WHAT IS A SET?? -- everything is sorted and is unique.
+
+## STL Containers
+map: ordered key-value, O(log n) ops
+unordered_map: hash-based, O(1) avg ops
+set: unique sorted elements, O(log n)
+unordered_set: hash-based unique elements
+priority_queue: max-heap by default
+  Use greater<int> for min-heap
+
+multiset: allows duplicates
