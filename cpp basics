@@ -5,3 +5,18 @@ getline: used to print the whole string at once.
 cout << str;
 
 --> the whole line we write in the input will get printed in o/p.
+
+
+VECTORS:
+basic syntax: vector<int> v;
+              v.pushback();
+              v.emplaceback();
+as iterator: vector<int>::iterator it = v.begin()
+TO PRINT AN ENTIRE VECTOR: for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+                              cout << *(it) << " ";
+                              }
+
+STACK IS LIFO
+QUEUE IS FIFO
+
+WHAT IS A SET?? -- everything is sorted and is unique.
