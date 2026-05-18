@@ -1,0 +1,11 @@
+binary tree types:
+
+FULL BINARY TREE - every node has either 0 or 2 children.
+COMPLETE BINARY TREE - all levels are completely filled except last level & the last level shd have everything as left as pssble.
+PERFECT BINARY TREE - all leaf nodes at same level
+BALANCED BINARY TREE - height of tree is at max log(n) where n is number of nodes
+DEGENERATE TREE - every node has single child. eg: 0
+                                                  /
+                                                0
+                                              /
+                                             0
