@@ -19,3 +19,18 @@
 ### Counting Sort
 - Time: O(n+k), Space: O(k)
 - Only for integers in known range
+
+## Binary Search
+
+Search sorted array in O(log n).
+lo=0, hi=n-1, mid = lo + (hi-lo)/2
+
+Standard: find exact target
+Lower bound: first position where arr[mid] >= target
+Upper bound: first position where arr[mid] > target
+
+Applications:
+- Find square root
+- Peak element
+- Search in rotated sorted array
+- Minimize the maximum (binary search on answer)
