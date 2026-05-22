@@ -1,0 +1,11 @@
+GPT - generated pre-trained transformer is a neural n/w and machine learning model inspired by human beigns functioning. it generates content throught natural conversational language
+DALL-E: an AI model that generates images based on textual descriptions
+Whisper: automatic speech recognition system
+AI is ability of a comp system to learn from the past data and eerrors and able to make future predcitions accurately
+
+ML: is a data science technique that uses algos to create predictive models. these models are taught and validated this process is known as training. retraining helps the ml models to improve. methods to train models: supervised learning, unsupervised learning, reinforcement learning.
+DL: subfield of ml inspired by structure and funcn of brain called artifical neural networks with several layers (hence the word deep). so it uses artificial neural n/ws to excel at identifying patterns
+NLP: appln of AI which enables machines to both process and comprehend human language in the way it is written. uses similar principles like DL but is more foucsed on text lang.
+
+AI algorithms: step by step instructions given to a comp to solve prblms or tasks.
+               diff types: classification, optimization, regression, clustering
