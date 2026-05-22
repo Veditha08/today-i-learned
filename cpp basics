@@ -1,32 +1,47 @@
-getline: used to print the whole string at once.
+﻿# C++ Basics
 
-  string str;
-  getline(cin, str)
+## getline
+Used to read an entire line (including spaces) from input.
+
+```cpp
+string str;
+getline(cin, str);
 cout << str;
+```
+> Whole line entered becomes the output â€” unlike `cin >>` which stops at space.
 
---> the whole line we write in the input will get printed in o/p.
+## Vectors
 
+```cpp
+vector<int> v;
+v.push_back(5);     // add to end
+v.emplace_back(6);  // faster than push_back for objects
 
-VECTORS:
-basic syntax: vector<int> v;
-              v.pushback();
-              v.emplaceback();
-as iterator: vector<int>::iterator it = v.begin()
-TO PRINT AN ENTIRE VECTOR: for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
-                              cout << *(it) << " ";
-                              }
+// Iterate using iterator
+for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+    cout << *it << " ";
+}
 
-STACK IS LIFO
-QUEUE IS FIFO
+// Simpler with auto
+for (auto x : v) cout << x << " ";
+```
 
-WHAT IS A SET?? -- everything is sorted and is unique.
+## Stack & Queue
+- **Stack** â€” LIFO (Last In First Out)
+- **Queue** â€” FIFO (First In First Out)
 
-## STL Containers
-map: ordered key-value, O(log n) ops
-unordered_map: hash-based, O(1) avg ops
-set: unique sorted elements, O(log n)
-unordered_set: hash-based unique elements
-priority_queue: max-heap by default
-  Use greater<int> for min-heap
+## Set
+Every element is **sorted** and **unique** automatically.
 
-multiset: allows duplicates
+## STL Containers â€” Quick Reference
+
+| Container | Order | Unique | Time Complexity |
+|---|---|---|---|
+| `map` | Sorted | Yes (key) | O(log n) |
+| `unordered_map` | None | Yes (key) | O(1) avg |
+| `set` | Sorted | Yes | O(log n) |
+| `unordered_set` | None | Yes | O(1) avg |
+| `priority_queue` | Max-heap | No | O(log n) push/pop |
+| `multiset` | Sorted | No | O(log n) |
+
+> Use `priority_queue<int, vector<int>, greater<int>>` for min-heap.
