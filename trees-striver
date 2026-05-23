@@ -1,11 +1,26 @@
-binary tree types:
+﻿# Binary Tree Types
 
-FULL BINARY TREE - every node has either 0 or 2 children.
-COMPLETE BINARY TREE - all levels are completely filled except last level & the last level shd have everything as left as pssble.
-PERFECT BINARY TREE - all leaf nodes at same level
-BALANCED BINARY TREE - height of tree is at max log(n) where n is number of nodes
-DEGENERATE TREE - every node has single child. eg: 0
-                                                  /
-                                                0
-                                              /
-                                             0
+## Full Binary Tree
+Every node has **either 0 or 2 children**. No node has exactly 1 child.
+
+## Complete Binary Tree
+All levels are **completely filled except the last level**, and the last level has nodes as far **left** as possible.
+
+## Perfect Binary Tree
+All **leaf nodes are at the same level**. Every internal node has exactly 2 children.
+
+## Balanced Binary Tree
+Height of the tree is at most **O(log n)**, where n = number of nodes.
+Used in: AVL Trees, Red-Black Trees.
+
+## Degenerate Tree (Skewed Tree)
+Every node has **only a single child** â€” essentially a linked list.
+
+```
+    0
+   /
+  0
+ /
+0
+```
+> Worst case for BST operations â€” degrades to O(n).
