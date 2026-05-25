@@ -1,4 +1,17 @@
-python is of two types -- pythong2 (active until 2020), python 3
+﻿# Python Basics
 
-tools - IDE & Code editor:   IDE(integrated developer environment) autocompletes the code, debugging and running. eg: PyCharm
-                             code editor: like vscode codechamps etc.
+## Versions
+- **Python 2** â€” officially deprecated in 2020, no longer maintained
+- **Python 3** â€” current standard, use this
+
+## Tools
+
+### IDE (Integrated Development Environment)
+Provides autocomplete, debugging, and run support in one place.
+Example: **PyCharm**
+
+### Code Editor
+Lightweight editor where you write code, needs extensions for full dev features.
+Examples: **VS Code**, **Sublime Text**
+
+> **Tip:** VS Code with the Python extension is the most common setup for beginners â€” it's free and fast.
