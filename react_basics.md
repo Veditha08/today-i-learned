@@ -16,3 +16,26 @@ Gets compiled to React.createElement() calls.
 
 ## Props
 Read-only data passed from parent to child.
+
+## React Hooks
+
+### useState
+Adds state to functional components.
+const [value, setValue] = useState(initialValue)
+
+### useEffect
+Side effects: data fetching, subscriptions, timers.
+Runs after render. Return cleanup function.
+Dependency array controls when it re-runs.
+
+### useRef
+Access DOM elements directly.
+Persist value without re-render.
+
+### useMemo / useCallback
+Performance optimization.
+Memoize expensive calculations or functions.
+
+Rules of Hooks:
+- Only call at top level (not inside loops/conditionals)
+- Only call from React function components
