@@ -9,3 +9,10 @@ alert syntax: alert('helloooo');  ---- idhi load chesinapud or smthng like alert
 in ur code editor if u type smthng in console.log(), then that will appear in the console said above.
 
   VARIABLES: we use var,let,const. but var not much used anymore cuz var is globally scoped. let and const and block scoped.
+
+
+//ARROW FUNCTIONS
+arrow functions: we can use const and not function keyword:
+const addnums(num1 = 1, num2 = 1) =>{                       or     const addnums(num1=1, num2=1)=> num1+num2;
+return num1+num2;}                                                 console.log(5,5);
+console.log(addnums(4,4));
