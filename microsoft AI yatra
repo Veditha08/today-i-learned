@@ -1,22 +1,49 @@
-GPT - generated pre-trained transformer is a neural n/w and machine learning model inspired by human beigns functioning. it generates content throught natural conversational language
-DALL-E: an AI model that generates images based on textual descriptions
-Whisper: automatic speech recognition system
-AI is ability of a comp system to learn from the past data and errors and able to make future predcitions accurately
+﻿# Microsoft AI Yatra â€” Notes
 
-ML: is a data science technique that uses algos to create predictive models. these models are taught and validated this process is known as training. retraining helps the ml models to improve. methods to train models: supervised learning, unsupervised learning, reinforcement learning.
-DL: subfield of ml inspired by structure and funcn of brain called artifical neural networks with several layers (hence the word deep). so it uses artificial neural n/ws to excel at identifying patterns
-NLP: appln of AI which helps machines to both process and comprehend human language in the way it is written. uses similar principles like DL but is more foucsed on text lang.
+## Core AI Concepts
 
-AI algorithms: step by step instructions given to a comp to solve prblms or tasks.
-               diff types: classification, optimization, regression, clustering
-classification: like sorting emails which ones to show in inbox and which ones are spam
-regression: based on past predicting the future like predicting the cost of a house during house hunting.
+**AI (Artificial Intelligence)**
+The ability of a computer system to learn from past data and errors to make accurate future predictions.
 
+**ML (Machine Learning)**
+A data science technique that uses algorithms to create predictive models. Models are "trained" on data, then "validated". Retraining improves accuracy over time.
 
+Training methods:
+- Supervised Learning
+- Unsupervised Learning
+- Reinforcement Learning
 
-GEN AI: type of AI algos that generate new o/ps based on the data trained on.
+**DL (Deep Learning)**
+A subfield of ML inspired by the structure of the human brain â€” uses **Artificial Neural Networks** with many layers (hence "deep"). Excels at identifying patterns in images, audio, text.
 
-LLMS: advanced ai models trained in large amts of text data. they predict words in sequences, perform tasks like text generation, summarization, translation and classification
-      focuses on creating new content. by using llms, gen ai can produce human-like text
+**NLP (Natural Language Processing)**
+Applies AI to help machines understand and process human language as it is written or spoken. Builds on DL principles but is focused specifically on text and language.
 
+## AI Algorithms
+Step-by-step instructions given to a computer to solve a problem.
 
+| Type | What it does | Example |
+|---|---|---|
+| Classification | Groups data into categories | Spam vs inbox emails |
+| Regression | Predicts a numeric value | Predicting house prices |
+| Clustering | Groups similar data without labels | Customer segmentation |
+| Optimization | Finds the best solution | Route planning |
+
+## Generative AI
+AI algorithms that generate **new outputs** (text, images, audio, code) based on the data they were trained on.
+
+**LLMs (Large Language Models)**
+Advanced AI models trained on massive amounts of text data. They predict the next word in a sequence, enabling:
+- Text generation
+- Summarization
+- Translation
+- Code generation
+
+**GPT** (Generative Pre-trained Transformer)
+A neural network and ML model inspired by how humans think. Generates content through natural conversational language.
+
+**DALL-E**
+An AI model that generates images from text descriptions.
+
+**Whisper**
+An automatic speech recognition system â€” converts audio to text.
