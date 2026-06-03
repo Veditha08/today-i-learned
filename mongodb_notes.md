@@ -18,3 +18,21 @@ Array: in, nin, all, elemMatch
 
 ## Aggregation Pipeline
 Stages: match, group, project, sort, limit, lookup
+
+## Mongoose ORM
+
+Schema: defines structure and validation
+Model: interface for DB operations
+Middleware: pre/post hooks for operations
+
+Schema types:
+String, Number, Date, Boolean, ObjectId, Array, Mixed
+
+Validation:
+required, min, max, minLength, maxLength, enum
+
+Virtuals:
+Computed properties not stored in DB.
+
+Populate:
+Joins referenced documents - replaces ObjectId with actual document.
