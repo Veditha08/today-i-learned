@@ -1,5 +1,24 @@
-npm - package manager. installs packages.
-npx - for installing packages only for once just to run that app for now.
+﻿# npm vs npx
 
-example: if u want to call the plumber to fix the tap in ur house, and they say that baad mei bhi kaam ayenge toh ghar pe rkhlo inko; it is npm.
-but if u just call him whenever u want, it is npx.
+## npm (Node Package Manager)
+Installs packages **permanently** into your project (or globally).
+Use when you'll need the package repeatedly across sessions.
+
+```bash
+npm install express     # installs and saves to package.json
+npm i -g nodemon        # install globally, available anywhere
+```
+
+## npx (Node Package eXecute)
+Runs a package **once, on the spot**, without permanently installing it.
+Use when you only need to run it once (e.g., scaffolding tools).
+
+```bash
+npx create-react-app my-app   # runs without installing globally
+```
+
+---
+
+**Analogy:**
+> Calling a plumber who stays at your house full-time = **npm** (permanent install)
+> Calling a plumber only when you need them = **npx** (one-time run)
