@@ -39,3 +39,21 @@ Memoize expensive calculations or functions.
 Rules of Hooks:
 - Only call at top level (not inside loops/conditionals)
 - Only call from React function components
+
+## State Management
+
+### Props Drilling Problem
+Passing props through many intermediate components is messy.
+
+### Context API
+React.createContext() - creates context
+Provider - wraps component tree, provides value
+useContext() hook - consumes context value
+
+### When to use Redux vs Context
+Context: simple global state (theme, auth, language)
+Redux: complex state, many actions, time-travel debugging
+
+### React Query
+Server state management
+Caching, background refresh, loading/error states
