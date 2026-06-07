@@ -1,57 +1,69 @@
-                    CLIENT
-                      │
-                      │ HTTP Request
-                      ▼
-                ┌─────────────┐
-                │   SERVER    │
-                │             │
-                │ Routing     │
-                │ Middleware  │
-                │ Validation  │
-                │ Business    │
-                │ Logic       │
-                └──────┬──────┘
-                       │
-                       ▼
-                 DATABASE
-                       │
-                       ▼
-                 HTTP Response
-                       │
-                       ▼
-                    CLIENT
+﻿# Backend Basics
 
+## How a Request Flows
 
+```
+        CLIENT
+          â”‚
+          â”‚  HTTP Request
+          â–¼
+    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+    â”‚   SERVER    â”‚
+    â”‚             â”‚
+    â”‚  Routing    â”‚
+    â”‚  Middleware â”‚
+    â”‚  Validation â”‚
+    â”‚  Business   â”‚
+    â”‚  Logic      â”‚
+    â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”˜
+           â”‚
+           â–¼
+       DATABASE
+           â”‚
+           â–¼
+     HTTP Response
+           â”‚
+           â–¼
+        CLIENT
+```
 
-### npm init-y
-for a project when u make the folder and then do npm init -y, it creates the package.json for it.
-package.json is basically the metadata/configuration file for a Node project.
+## Setting Up a Project
 
-### what's express?? and need? 
-while routing so many if else condns for what to do for each route so we use a framework on top of node.js
-node.js provides a runtime environment for us to run js outside of our browser. 
-express is a framework on top of node.js which makes it easier to create http servers and apis.
+```bash
+npm init -y       # creates package.json (project metadata/config file)
+npm i express     # install Express framework
+```
 
+## What is Express?
+Node.js gives us a **runtime** to run JS outside the browser.
+But handling every route manually with `if/else` is messy â€” so we use **Express**, a framework on top of Node.js that makes creating HTTP servers and APIs much cleaner.
 
-### JSON data:
-APIs normally communicate using JSON, rather than returning HTML/text pages.
+## JSON â€” How APIs Talk
 
-Eventually QueueFlow might return:
-{ \
-  "queueId": 12, \
-  "name": "Mess Counter", \
-  "position": 7, \
-  "status": "waiting" \
+APIs return data as **JSON** (not HTML). The frontend then uses this data to display whatever it wants.
+
+```json
+{
+  "queueId": 12,
+  "name": "Mess Counter",
+  "position": 7,
+  "status": "waiting"
 }
-The frontend can then take this data and display it however it wants.
-That's the fundamental idea behind a REST API.
+```
+> This is the core idea behind a **REST API**.
 
-### HTTP methods:
-GET → read
-POST → create
-PATCH → partially update
-DELETE → delete
+## HTTP Methods
 
-### middleware:
+| Method | Purpose |
+|---|---|
+| `GET` | Read data |
+| `POST` | Create data |
+| `PATCH` | Partially update data |
+| `DELETE` | Delete data |
+
+## Middleware
+
+```js
 app.use(express.json());
-A function that gets to process a request before your route handler does.
+```
+A function that **intercepts and processes the request** before it reaches your route handler.
