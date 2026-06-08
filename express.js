@@ -49,5 +49,17 @@ there is a spcl route in express.js which is meant for error handling.
 
           app.listen(3000);
 
-                  
+//FORM HANDLING
+process of receiving and managing the data submitted by a user from the frontend lib or a framework or templating engines
+
+when user submits a form, the data doesnt go as same plain text. it goes as some hexadecimal or unreadable blob of data basically.
+so to make this readable for the server again, we keep middlewares.
+specifically, 1. app.use(express.json()) used to parse the data sent in json format. common when using react or making api calls via fetch.
+              2. app.use(express.urlencoded({ extended: true })) used to parse data sent as url encoded form data. it is standard for html form submissions
+
+//session and cookies
+cookies: are small strings of data stored on the user's front end that identify the user. baar baar jb server ke saath communicate krte hai we send this cookie
+so tht woh humko pehchan paye warna baar baar login krna pdega.
+
+sessions: the active connection state btwn the user and the server.
   
