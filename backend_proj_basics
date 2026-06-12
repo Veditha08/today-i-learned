@@ -1,0 +1,27 @@
+//initialize with npm: creates package.json
+npm init -y
+
+//express install
+npm i express
+
+setting up ejs for ejs pages
+//what is ejs? ejs is our frontend. it is just like html but dynamic. means if u write 2+2 as a heading in html it cant calc but if u tell ejs how to add
+and all then automatically it will add. basically it is dynamic and html isnt. that is the difference.
+
+1. install: npm i ejs
+2. setup ejs as a view engine: means we are telling that our backend will render and show ejs pages. 
+app.set('view engine', 'ejs');
+create a new folder views in which create index.ejs which will have the same boilerplate like html code only
+now we can change the res.send to res.render and remove what we want to show and write there anything which is in the index.ejs or just index
+
+//in ejs to write any dynamic part:  <%= 2+2 %> then automatic calc hojayega
+
+//SETTING UP PUBLIC STATIC FILES: what are they? all images, stylesheets everything related to frontend and all
+so add the lines const path = require('path')                                        //u have to require the package path which is already installed in node
+                 app.use(express.static(path.join(__dirname, 'public')));            //mtlb for every req for the static files, go to that path. and basically path.join kya krega mtlb this will give u the path of the directory and add to it /public
+and create a folder in the root named public and in it create files images, javascripts, stylesheets
+
+
+
+
+
