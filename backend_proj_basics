@@ -19,7 +19,22 @@ now we can change the res.send to res.render and remove what we want to show and
 //SETTING UP PUBLIC STATIC FILES: what are they? all images, stylesheets everything related to frontend and all
 so add the lines const path = require('path')                                        //u have to require the package path which is already installed in node
                  app.use(express.static(path.join(__dirname, 'public')));            //mtlb for every req for the static files, go to that path. and basically path.join kya krega mtlb this will give u the path of the directory and add to it /public
-and create a folder in the root named public and in it create files images, javascripts, stylesheets
+and create a folder in the root named public and in it create folder images, javascripts, stylesheets
+and then create a file in stylesheets named style.css and go to index.ejs and write <link rel="stylesheet" href="/stylesheets/style.css'>
+                                                                                   no need to write /public because paina we already included. so in any ejs page(rendering pages) we shdnt write /public remove it
+
+//DYNAMIC ROUTING: for such paths there is no need to create separate routes: /author/ved
+                                                                              /author/veditha , /author/siva etc etc
+***follow this approach while creating routes: go to browser and type ur desired url and then create that route by sending any res
+***ab isi route ko dynamic bnana hai toh identify which part is dynamic.. uss ke aage : ye lagado. url mei nhi route mei
+EXAMPLE: /profile/:username is the route and if we res.send(req.params.username) then the dynamic username will be shown on the browser screen
+
+
+//TO INCLUDE TAILWIND CSS: just add this line below meta name in ur index.ejs or html file basically:
+                          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+
 
 
 
