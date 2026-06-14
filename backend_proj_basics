@@ -1,45 +1,63 @@
-//initialize with npm: creates package.json
-npm init -y
+﻿# Backend Project Setup â€” Basics
 
-//express install
-npm i express
+## 1. Initialize Project
+```bash
+npm init -y       # creates package.json
+npm i express     # install Express
+```
 
-setting up ejs for ejs pages
-//what is ejs? ejs is our frontend. it is just like html but dynamic. means if u write 2+2 as a heading in html it cant calc but if u tell ejs how to add
-and all then automatically it will add. basically it is dynamic and html isnt. that is the difference.
+## 2. Setting Up EJS (Frontend Templating)
 
-1. install: npm i ejs
-2. setup ejs as a view engine: means we are telling that our backend will render and show ejs pages. 
-app.set('view engine', 'ejs');
-create a new folder views in which create index.ejs which will have the same boilerplate like html code only
-now we can change the res.send to res.render and remove what we want to show and write there anything which is in the index.ejs or just index
+**What is EJS?**
+EJS (Embedded JavaScript) is like HTML but **dynamic** â€” it can execute JS expressions.
+- HTML: `<h1>2+2</h1>` â†’ shows "2+2" literally
+- EJS: `<h1><%= 2+2 %></h1>` â†’ shows "4"
 
-//in ejs to write any dynamic part:  <%= 2+2 %> then automatic calc hojayega
+```bash
+npm i ejs
+```
 
-//SETTING UP PUBLIC STATIC FILES: what are they? all images, stylesheets everything related to frontend and all
-so add the lines const path = require('path')                                        //u have to require the package path which is already installed in node
-                 app.use(express.static(path.join(__dirname, 'public')));            //mtlb for every req for the static files, go to that path. and basically path.join kya krega mtlb this will give u the path of the directory and add to it /public
-and create a folder in the root named public and in it create folder images, javascripts, stylesheets
-and then create a file in stylesheets named style.css and go to index.ejs and write <link rel="stylesheet" href="/stylesheets/style.css'>
-                                                                                   no need to write /public because paina we already included. so in any ejs page(rendering pages) we shdnt write /public remove it
+```js
+app.set('view engine', 'ejs');  // tell Express to use EJS
+```
 
-//DYNAMIC ROUTING: for such paths there is no need to create separate routes: /author/ved
-                                                                              /author/veditha , /author/siva etc etc
-***follow this approach while creating routes: go to browser and type ur desired url and then create that route by sending any res
-***ab isi route ko dynamic bnana hai toh identify which part is dynamic.. uss ke aage : ye lagado. url mei nhi route mei
-EXAMPLE: /profile/:username is the route and if we res.send(req.params.username) then the dynamic username will be shown on the browser screen
+- Create a `views/` folder, add `index.ejs` (same boilerplate as HTML)
+- Change `res.send()` to `res.render('index')`
+- Use `<%= expression %>` for dynamic content in EJS files
 
+## 3. Serving Static Files (CSS, Images, JS)
 
-//TO INCLUDE TAILWIND CSS: just add this line below meta name in ur index.ejs or html file basically:
-                          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+```js
+const path = require('path');  // built-in Node module, no install needed
+app.use(express.static(path.join(__dirname, 'public')));
+```
 
-//TO SETUP DB SERVER:
-npm i mongoose
+- Create a `public/` folder with subfolders: `images/`, `javascripts/`, `stylesheets/`
+- In your EJS file, link CSS as: `<link rel="stylesheet" href="/stylesheets/style.css">`
+- No need to write `/public/` â€” Express serves from inside `public/` automatically
 
+## 4. Dynamic Routing
 
+For routes that have a variable part (e.g., `/profile/ved`, `/profile/veditha`), use `:param` syntax:
 
+```js
+app.get('/profile/:username', function(req, res) {
+  res.send(req.params.username);  // shows the dynamic part in the browser
+});
+```
 
+> **Tip:** In the browser, type the URL you want first â€” then create the route for it.
+> Identify which part changes â†’ put `:` before it in the route.
 
+## 5. Adding Tailwind CSS (Quick Way)
 
+Add this line inside `<head>` in your EJS/HTML file:
+```html
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+```
 
+## 6. Connect to Database (MongoDB)
 
+```bash
+npm i mongoose    # connects your app server to the MongoDB database server
+```
