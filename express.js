@@ -54,6 +54,7 @@ process of receiving and managing the data submitted by a user from the frontend
 
 when user submits a form, the data doesnt go as same plain text. it goes as some hexadecimal or unreadable blob of data basically.
 so to make this readable for the server again, we keep middlewares.
+  //parsers for form antaru ee rendu ni
 specifically, 1. app.use(express.json()) used to parse the data sent in json format. common when using react or making api calls via fetch.
               2. app.use(express.urlencoded({ extended: true })) used to parse data sent as url encoded form data. it is standard for html form submissions
 
