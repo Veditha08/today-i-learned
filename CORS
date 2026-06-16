@@ -1,4 +1,24 @@
-import cors from 'cors';
+﻿# CORS â€” Cross-Origin Resource Sharing
 
-CORS = cross origin resource sharing. it allows the express server to accept requests from various web pages hosted on different domains
-This is important for modern web applications that access APIs running on a different server or port
+## What is it?
+CORS allows an Express server to **accept requests from web pages hosted on different domains or ports**.
+
+This is essential for modern web apps where the frontend and backend run separately (e.g., React on `localhost:3000` calling an API on `localhost:5000`).
+
+## Setup
+
+```bash
+npm i cors
+```
+
+```js
+import cors from 'cors';
+app.use(cors());              // allow all origins (dev only)
+
+// Or restrict to specific origin
+app.use(cors({ origin: 'https://yourfrontend.com' }));
+```
+
+## Why it matters
+By default, browsers **block** requests made to a different origin for security.
+CORS is the server's way of saying "yes, I trust requests from this domain."
