@@ -113,3 +113,19 @@ Cross-Site Request Forgery (CSRF): An attacker tricks a logged-in user's browser
 
 Fix: Use CSRF Tokens or strict SameSite cookie settings.
    
+
+## JWT Deep Dive
+
+Structure: Header.Payload.Signature (base64 encoded)
+Header: algorithm (HS256, RS256)
+Payload: claims - sub, iat, exp, custom data
+Signature: HMAC of header+payload using secret
+
+Access Token: short-lived (15min-1hr)
+Refresh Token: long-lived (7-30 days), stored in httpOnly cookie
+
+Best practices:
+- Never store JWT in localStorage (XSS risk)
+- Use httpOnly, Secure, SameSite=Strict cookies
+- Rotate refresh tokens
+- Implement token blacklisting on logout
