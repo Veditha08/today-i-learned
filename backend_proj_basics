@@ -33,6 +33,9 @@ EXAMPLE: /profile/:username is the route and if we res.send(req.params.username)
 //TO INCLUDE TAILWIND CSS: just add this line below meta name in ur index.ejs or html file basically:
                           <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+//TO SETUP DB SERVER:
+npm i mongoose
+
 
 
 
