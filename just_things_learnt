@@ -1,8 +1,24 @@
-## REDIS
-- in backend dev, Caching with Redis When millions of users request the exact same piece of data (like the homepage of a trending news site or a product catalog),
-hitting the database every single time will crash your server.
-  The Concept: You introduce an in-memory cache layer using Redis.\
-- How it works: When a request comes in, the backend checks Redis first. If the data is there (a cache hit), it returns it instantly. If not (a cache miss), it pulls it from the slow database,
-saves a copy in Redis for next time, and returns it.
-- This is a crucial concept for both scaling apps and PM system design.
-- Redis stands for REmote DIctionary Server.  It is an open-source, in-memory, NoSQL key/value data structure store used primarily as a database, cache, and message broker.
+﻿# Just Things Learnt
+
+## Redis â€” In-Memory Caching
+
+**The problem:** When millions of users request the same data (like a homepage or product catalog), hitting the database every single time will crash the server.
+
+**The solution:** Add an in-memory cache layer using **Redis**.
+
+### How it works:
+1. Request comes in
+2. Backend checks Redis first
+   - **Cache hit** â†’ return data instantly (fast)
+   - **Cache miss** â†’ fetch from database, store a copy in Redis, return it
+
+This means the second time anyone asks for the same data, it comes from memory â€” no database query needed.
+
+### What is Redis?
+**Redis** = **Re**mote **Di**ctionary **S**erver
+
+- Open-source, in-memory, NoSQL key-value store
+- Used as: database, cache, and message broker
+- Extremely fast because everything lives in RAM
+
+> This is a crucial concept for both **scaling backend apps** and **PM system design interviews**.
