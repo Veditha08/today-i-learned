@@ -1,26 +1,57 @@
-db- relational and no sql: means sql and no sql
-in relational db: we store data in tables that are linked to each other using relationships
-some rdbms: mysql, postgresql, oracle
+﻿# SQL & Databases
+
+## Types of Databases
+
+**Relational DB (SQL):** Data stored in **tables linked to each other** using relationships (foreign keys).
+Examples: MySQL, PostgreSQL, Oracle
+
+**Non-Relational DB (NoSQL):** Data stored as documents, key-value pairs, graphs, etc.
+Examples: MongoDB, Redis, Cassandra
+
+---
 
 ## SQL JOINs
-INNER JOIN: only matching rows in both tables
-LEFT JOIN: all from left + matching from right (NULL if no match)
-RIGHT JOIN: all from right + matching from left
-FULL OUTER JOIN: all rows from both tables
+
+| JOIN Type | What it returns |
+|---|---|
+| `INNER JOIN` | Only rows that match in **both** tables |
+| `LEFT JOIN` | All rows from left + matched rows from right (NULL if no match) |
+| `RIGHT JOIN` | All rows from right + matched rows from left |
+| `FULL OUTER JOIN` | All rows from both tables |
+
+---
 
 ## Subqueries
-Nested query inside main query.
-Correlated subquery: references outer query.
+A query nested inside another query.
+
+```sql
+SELECT name FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+```
+
+A **correlated subquery** references the outer query â€” runs once per outer row.
+
+---
 
 ## Indexes
-Speed up SELECT queries on indexed columns.
-B-tree index (default): for range queries.
-Hash index: for equality checks.
-Composite index: multiple columns.
-Note: indexes slow down INSERT/UPDATE/DELETE.
+Speed up `SELECT` queries on the indexed column.
+
+| Index Type | Best for |
+|---|---|
+| B-tree (default) | Range queries (`>`, `<`, `BETWEEN`) |
+| Hash | Exact equality (`=`) |
+| Composite | Queries filtering by multiple columns |
+
+> âš ï¸ Indexes speed up reads but slow down `INSERT`, `UPDATE`, and `DELETE`.
+
+---
 
 ## ACID Properties
-Atomicity: all or nothing
-Consistency: DB stays valid state
-Isolation: transactions don't interfere
-Durability: committed data persists
+Guarantees that database transactions are processed reliably.
+
+| Property | Meaning |
+|---|---|
+| **Atomicity** | All or nothing â€” transaction fully completes or fully fails |
+| **Consistency** | DB always moves from one valid state to another |
+| **Isolation** | Concurrent transactions don't interfere with each other |
+| **Durability** | Committed data persists even after crashes |
