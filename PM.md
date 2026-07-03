@@ -1,7 +1,7 @@
-PM:                                 A Product Manager is often viewed as the "CEO of the Product", requiring a unique blend of business, technical, and strategic skills to drive the product's success. 
+### PM:                                 A Product Manager is often viewed as the "CEO of the Product", requiring a unique blend of business, technical, and strategic skills to drive the product's success. 
                                     The ability to continuously learn and adapt is also crucial due to the dynamic nature of the product management industry.
 
-PRODUCT LIFE CYCLE:                 
+## PRODUCT LIFE CYCLE:                 
                                     it tracks a product from beginning to end, helping you prepare for market shifts as competition grows and demand falls.
                                     it is useful to predict marketing strategies and  what to use when. also can be used to estimate the profits and revenue
                                     stages: development, growth, maturity, decline
@@ -12,7 +12,7 @@ PRODUCT LIFE CYCLE:
                                     DECLINE: even if we try the product slowly deteriorates, no matter what all products will get down the market they dont stay forever. we may realize that consumers may not
                                     want this anymore.
 
-IDEA GENERATION:     
+## IDEA GENERATION:     
 
        PRODUCT IDENTIFICATION:       brainstorming tools, mind mapping, brainwriting, SCAMPER, iterative process, blue ocean strategy, TRIZ(theory of inventive problem solving), problem framing
        
@@ -24,20 +24,20 @@ IDEA GENERATION:
                                      SURVEYS AND QUESTIONNAIRES
                                      ETHNOGRAPHIC RESEARCH
 
-PRODUCT PLANNING:      
+## PRODUCT PLANNING:      
 
         PRODUCT REQUIREMENTS:        writing prds, user stories, job stories
             PROD ROADMAP:
             BACKLOG MNGMNT:          involves organizing and prioritizing a list of tasks or features - known as the "backlog" -that are required for the development of a product. 
 
-PRODUCT DESIGN:
+## PRODUCT DESIGN:
 
         UI/UX DESIGN:                principles of UX design, wireframing(basic, visual guide used to suggest the layout of fundamental elements in a web or mobile application) & prototyping(interactive model of the product.)
 
-testing, then dev and launch.
+-> testing, then dev and launch.
 
 
-AGILE METHODOLOGY:                   
+## AGILE METHODOLOGY:                   
                                       before agile, companies used to use WATERFALL model: means 6months wriiting requirements, 6 months designing, 1 year coding and launch only to realise market shifted or
                                       users dint like it.
                                       
@@ -45,12 +45,16 @@ AGILE METHODOLOGY:
                                       fast, gather data, and adapt.
                                       a PM's goal in agile is to maximize the value delivered in each iteration. 
 
-        AGILE FRAMEWORKS: SCRUM:      breaks down time into SPRINTS(usually 2 to 4 weeks long) 3 core roles in scrum:
+        AGILE FRAMEWORKS: ### SCRUM:      breaks down time into SPRINTS(usually 2 to 4 weeks long) 3 core roles in scrum:
                                       Product Owner/PM: owns the What and Why
                                       Scrum Master:     owns the Process. removes blockers like dependencies or bureaucratic hurdles so the engineers can focus. 
                                       Development Team: owns the How
-                          KANBAN:     Where Scrum is structured and time-boxed, Kanban is fluid and continuous. There are no fixed sprints. Work is pulled continuously from a backlog(master list of features)
+                          ### KANBAN:     Where Scrum is structured and time-boxed, Kanban is fluid and continuous. There are no fixed sprints. Work is pulled continuously from a backlog(master list of features)
                           into a visual pipeline.
+
+-> then product metrics: used to measure the success of the released product
+## KEY PRODUCT METRICS:
+     1. DAU: DAILY ACTIVE USERS: 
 
 
                           
