@@ -57,3 +57,24 @@ Redux: complex state, many actions, time-travel debugging
 ### React Query
 Server state management
 Caching, background refresh, loading/error states
+
+## React Router v6
+
+Single Page Application navigation without full page reload.
+Install: npm install react-router-dom
+
+Key components:
+BrowserRouter: wraps entire app
+Routes: container for Route elements
+Route: maps path to component
+Link / NavLink: navigation without reload
+
+Hooks:
+useNavigate: programmatic navigation
+useParams: access URL parameters
+useLocation: current location object
+useSearchParams: query string params
+
+Protected Routes:
+Wrap protected routes with auth check component.
+Redirect to login if not authenticated.
