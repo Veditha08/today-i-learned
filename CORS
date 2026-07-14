@@ -1,0 +1,4 @@
+import cors from 'cors';
+
+CORS = cross origin resource sharing. it allows the express server to accept requests from various web pages hosted on different domains
+This is important for modern web applications that access APIs running on a different server or port
