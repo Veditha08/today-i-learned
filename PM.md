@@ -1,5 +1,8 @@
-### PM:                                 A Product Manager is often viewed as the "CEO of the Product", requiring a unique blend of business, technical, and strategic skills to drive the product's success. 
+### PM:                             
+                                    A Product Manager is often viewed as the "CEO of the Product", requiring a unique blend of business, technical, and strategic skills to drive the product's success. 
                                     The ability to continuously learn and adapt is also crucial due to the dynamic nature of the product management industry.
+
+                                    a pm is many things- a communications hub, prioritizer, researcher, a presenter but most importantly responsible for the ultimate success of the product.
 
 ## PRODUCT LIFE CYCLE:                 
                                     it tracks a product from beginning to end, helping you prepare for market shifts as competition grows and demand falls.
