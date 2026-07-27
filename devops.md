@@ -23,3 +23,24 @@ Manages multi-container applications
 Define services, networks, volumes in YAML
 docker-compose up -d (start in background)
 docker-compose down (stop and remove)
+
+## CI/CD
+
+Continuous Integration: auto build+test on every push
+Continuous Delivery: auto deploy to staging
+Continuous Deployment: auto deploy to production
+
+Popular Tools: GitHub Actions, Jenkins, CircleCI, GitLab CI
+
+GitHub Actions concepts:
+Workflow: YAML file in .github/workflows/
+Trigger: on push, pull_request, schedule, workflow_dispatch
+Job: runs on a runner (ubuntu-latest, windows-latest)
+Step: individual command or action
+Action: reusable unit (checkout, setup-node, etc)
+
+Benefits:
+- Catch bugs early
+- Consistent testing
+- Faster, reliable deployments
+- Audit trail of changes
