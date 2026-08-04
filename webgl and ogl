@@ -1,3 +1,9 @@
-webgl and ogl are graphic libraries used to create 2d and 3d graphics
-ogl is low-lvel api primarily used with cpp for desktop and embedded systems.
-webgl is a js api which enables graphics rendering in web browsers.
+﻿# WebGL & OGL â€” Notes
+
+> Notes from when I explored 3D graphics on the web briefly.
+
+**WebGL** â€” A JavaScript API for rendering 2D and 3D graphics in the browser using the GPU. Based on OpenGL ES.
+
+**OGL** â€” A minimal WebGL framework. Much lighter than Three.js â€” good for understanding what's actually happening under the hood.
+
+Both work directly with the browser canvas element. WebGL gives fine-grained GPU control; OGL wraps it with sensible defaults without hiding too much.
