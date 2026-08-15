@@ -44,3 +44,27 @@ Asynchronous: Message queues (RabbitMQ, Apache Kafka)
 ### API Gateway
 Single entry point for all clients
 Handles auth, rate limiting, routing, load balancing
+
+## Web Performance Optimization
+
+Frontend Performance:
+- Lazy load images (loading="lazy")
+- Code splitting: load only needed JS chunks
+- Tree shaking: remove unused code
+- Minify CSS/JS
+- Compress with gzip or brotli
+- Use CDN for static assets
+- Critical CSS: inline above-fold styles
+
+Backend Performance:
+- N+1 query problem: use eager loading/joins
+- Database indexing on frequently queried columns
+- Connection pooling for DB connections
+- Redis caching for expensive/repeated reads
+- Pagination instead of loading all data
+- Horizontal scaling + load balancer
+
+Measurement Tools:
+- Lighthouse (Core Web Vitals)
+- Chrome DevTools Performance tab
+- WebPageTest
