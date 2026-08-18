@@ -24,27 +24,28 @@ These are available in every Node file (no import needed):
 ## Working with npm
 
 ```bash
-npm init -y           # create package.json with defaults
-node ./filename.js    # run a node file
-npm i packagename     # install a package (saves to dependencies)
-npm i packagename@1.2 # install a specific version
-npm uninstall pkg     # remove a package
+npm init -y            # create package.json with defaults
+node ./filename.js     # run a node file
+npm i packagename      # install a package (saves to dependencies)
+npm i packagename@1.2  # install a specific version
+npm uninstall pkg      # remove a package
 ```
 
-> **package.json** = the config/metadata file for your entire project. Tracks all dependencies.
+> **package.json** = the config/metadata file for your project. Tracks all dependencies and scripts.
 
 ## Dependencies vs DevDependencies
 - **dependency** â€” packages your app needs to run in production
-- **devDependency** â€” only needed during development (e.g., testing tools, linters)
+- **devDependency** â€” only needed during development (e.g., testing tools, nodemon)
 
 ## npm Scripts
 Commands you define under `"scripts"` in package.json. Run with `npm run <name>`.
-`npm start` and `npm test` don't need the `run` keyword.
+`npm start` and `npm test` are shortcuts â€” they don't need the `run` keyword.
 
 ```json
 "scripts": {
   "start": "node app.js",
-  "dev": "nodemon app.js"
+  "dev": "nodemon app.js",
+  "test": "jest"
 }
 ```
 
@@ -57,6 +58,8 @@ module.exports = { greet, helper };
 // Importing in another file
 const { greet } = require('./utils');
 ```
+
+> Note: ES Modules use `import/export` syntax â€” Node supports both, but CommonJS (`require`) is still common in backend code.
 
 ## HTTP Module (built-in)
 
