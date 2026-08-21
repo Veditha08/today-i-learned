@@ -32,10 +32,21 @@ app.get('/profile', function(req, res) {
 // localhost:3000/profile -> "hi welcome to profile"
 ```
 
+## HTTP Methods in Express
+
+| Method | Usage |
+|---|---|
+| `app.get()` | Read data |
+| `app.post()` | Create data |
+| `app.put()` | Replace entire resource |
+| `app.patch()` | Partially update resource |
+| `app.delete()` | Delete resource |
+
 ## nodemon
 Install once globally â€” auto-restarts server on file save.
 ```bash
 npm i nodemon -g
+nodemon app.js
 ```
 
 ---
