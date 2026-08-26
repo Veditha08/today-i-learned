@@ -8,8 +8,9 @@
 | **Database Server** | Stores data (e.g., MongoDB) |
 
 ## MongoDB Structure
-- A database contains **collections** (like tables)
-- Each collection holds **documents** (like rows, but in JSON format)
+- A database contains **collections** (like tables in SQL)
+- Each collection holds **documents** (like rows, but in flexible JSON format)
+- No fixed schema â€” each document can have different fields
 
 **mongod** â€” the actual MongoDB engine. Stores data and handles query logic.
 Clients like MongoDB Compass, `mongosh`, or your app all connect to the same mongod, so data stays consistent across devices.
@@ -18,19 +19,19 @@ Clients like MongoDB Compass, `mongosh`, or your app all connect to the same mon
 
 ## CRUD Operations
 
-| Operation | What it does |
-|---|---|
-| **Create** | Insert a new document |
-| **Read** | Fetch documents |
-| **Update** | Modify existing documents |
-| **Delete** | Remove documents |
+| Operation | What it does | Mongoose method |
+|---|---|---|
+| **Create** | Insert a new document | `Model.create()` |
+| **Read** | Fetch documents | `Model.find()`, `Model.findById()` |
+| **Update** | Modify existing documents | `Model.findByIdAndUpdate()` |
+| **Delete** | Remove documents | `Model.findByIdAndDelete()` |
 
 ### Mongoose Flow
 
 ```
-mongoose.connect(...)  â†’  DB is created
-model = mongoose.model(...)  â†’  Collection is created
-model.create(...)  â†’  Document is created
+mongoose.connect(...)         â†’  Database is created (if not exists)
+mongoose.model('name', schema) â†’  Collection is created
+model.create({...})           â†’  Document is created
 ```
 
 ## Project Setup (usermodel.js)
@@ -52,7 +53,7 @@ const userSchema = mongoose.Schema({
   email: String,
 });
 
-// Export the model so routes can use it
+// Export the model so routes can use it for CRUD
 module.exports = mongoose.model('user', userSchema);
-// MongoDB will create a collection called "users" (plural automatically)
+// MongoDB will auto-create a collection called "users" (pluralized)
 ```
