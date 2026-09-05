@@ -9,9 +9,12 @@ npm i express     # install Express
 ## 2. Setting Up EJS (Frontend Templating)
 
 **What is EJS?**
-EJS (Embedded JavaScript) is like HTML but **dynamic** â€” it can execute JS expressions.
-- HTML: `<h1>2+2</h1>` â†’ shows "2+2" literally
-- EJS: `<h1><%= 2+2 %></h1>` â†’ shows "4"
+EJS (Embedded JavaScript) is like HTML but **dynamic** â€” it can execute JS expressions inside `<%= %>` tags.
+
+| | HTML | EJS |
+|---|---|---|
+| Static text | `<h1>2+2</h1>` â†’ shows "2+2" | â€” |
+| Dynamic expression | â€” | `<h1><%= 2+2 %></h1>` â†’ shows "4" |
 
 ```bash
 npm i ejs
@@ -21,9 +24,8 @@ npm i ejs
 app.set('view engine', 'ejs');  // tell Express to use EJS
 ```
 
-- Create a `views/` folder, add `index.ejs` (same boilerplate as HTML)
+- Create a `views/` folder â†’ add `index.ejs` (same HTML boilerplate)
 - Change `res.send()` to `res.render('index')`
-- Use `<%= expression %>` for dynamic content in EJS files
 
 ## 3. Serving Static Files (CSS, Images, JS)
 
@@ -32,32 +34,32 @@ const path = require('path');  // built-in Node module, no install needed
 app.use(express.static(path.join(__dirname, 'public')));
 ```
 
-- Create a `public/` folder with subfolders: `images/`, `javascripts/`, `stylesheets/`
-- In your EJS file, link CSS as: `<link rel="stylesheet" href="/stylesheets/style.css">`
-- No need to write `/public/` â€” Express serves from inside `public/` automatically
+- Create a `public/` folder â†’ subfolders: `images/`, `javascripts/`, `stylesheets/`
+- In EJS: `<link rel="stylesheet" href="/stylesheets/style.css">`
+- Don't write `/public/` in the path â€” Express strips that automatically
 
 ## 4. Dynamic Routing
 
-For routes that have a variable part (e.g., `/profile/ved`, `/profile/veditha`), use `:param` syntax:
+For routes like `/profile/ved`, `/profile/veditha` â€” where part of the URL changes:
 
 ```js
+// The ':username' part is a URL parameter â€” it matches anything
 app.get('/profile/:username', function(req, res) {
-  res.send(req.params.username);  // shows the dynamic part in the browser
+  res.send(req.params.username);  // sends back whatever was in the URL
 });
 ```
 
-> **Tip:** In the browser, type the URL you want first â€” then create the route for it.
-> Identify which part changes â†’ put `:` before it in the route.
+> **Workflow:** Type the URL you want in the browser â†’ figure out which part is dynamic â†’ add `:` before it in the route definition.
 
-## 5. Adding Tailwind CSS (Quick Way)
+## 5. Adding Tailwind CSS (Quick CDN Way)
 
-Add this line inside `<head>` in your EJS/HTML file:
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 ```
+Add inside `<head>` in your EJS/HTML file.
 
 ## 6. Connect to Database (MongoDB)
 
 ```bash
-npm i mongoose    # connects your app server to the MongoDB database server
+npm i mongoose    # connects your app server to MongoDB
 ```
