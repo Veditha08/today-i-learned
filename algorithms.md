@@ -34,3 +34,29 @@ Applications:
 - Peak element
 - Search in rotated sorted array
 - Minimize the maximum (binary search on answer)
+
+## Common Coding Problem Patterns
+
+Sliding Window:
+- Fixed window: maintain sum/count in window of size k
+- Variable window: expand/shrink based on condition
+
+Two Pointers:
+- Sorted array problems
+- Palindrome check, 3Sum, Container With Most Water
+
+Fast and Slow Pointers:
+- Detect cycle in linked list (Floyd's algorithm)
+- Find middle of linked list
+
+Merge Intervals:
+- Sort by start, merge overlapping intervals
+
+Top K Elements:
+- Min-heap of size K
+- O(n log k) instead of sorting full array O(n log n)
+
+Backtracking:
+- Generate all subsets, permutations, combinations
+- N-Queens, Sudoku solver
+- Template: choose, explore, unchoose
