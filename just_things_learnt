@@ -4,21 +4,22 @@
 
 **The problem:** When millions of users request the same data (like a homepage or product catalog), hitting the database every single time will crash the server.
 
-**The solution:** Add an in-memory cache layer using **Redis**.
+**The solution:** Add an in-memory cache layer using **Redis** between your app and the database.
 
-### How it works:
-1. Request comes in
-2. Backend checks Redis first
-   - **Cache hit** â†’ return data instantly (fast)
-   - **Cache miss** â†’ fetch from database, store a copy in Redis, return it
+### How it works
+```
+Request â†’ Check Redis
+            â”œâ”€â”€ Cache HIT  â†’ return instantly âœ…
+            â””â”€â”€ Cache MISS â†’ fetch from DB â†’ store in Redis â†’ return
+```
 
-This means the second time anyone asks for the same data, it comes from memory â€” no database query needed.
+Next time anyone requests the same data, it comes from memory â€” no DB query needed.
 
 ### What is Redis?
 **Redis** = **Re**mote **Di**ctionary **S**erver
 
 - Open-source, in-memory, NoSQL key-value store
 - Used as: database, cache, and message broker
-- Extremely fast because everything lives in RAM
+- Blazing fast because all data lives in RAM
 
-> This is a crucial concept for both **scaling backend apps** and **PM system design interviews**.
+> Essential concept for **backend scaling** and **PM system design interviews**.
