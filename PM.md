@@ -94,11 +94,13 @@ No fixed sprints â€” **continuous flow**. Work is pulled from a backlog int
 | **MAU** (Monthly Active Users) | Unique users who engage at least once per month |
 | **Conversion Rate** | % of users who complete a desired action (purchase, sign-up) |
 | **Retention Rate** | % of users who keep using the product over time |
-| **Churn Rate** | % of users who stop using the product in a given period |
-| **LTV** (Lifetime Value) | Total revenue expected from a single customer over their entire relationship |
+| **Churn Rate** | % of users who leave in a given period |
+| **LTV** (Lifetime Value) | Total revenue expected from one customer over their full relationship |
 
-**Churn Rate example:**
-Start the month with 100 users, end with 90 â†’ Churn Rate = 10%.
-Low churn = high satisfaction and loyalty.
+**Churn Rate formula:**
+```
+Churn Rate = (Users lost in period / Users at start of period) x 100
+```
+Example: Start with 100 users, end with 90 â†’ Churn = 10%. Low churn = high satisfaction.
 
 **LTV** ties together acquisition costs, retention costs, and the revenue a customer generates â€” a long-term business health metric.
