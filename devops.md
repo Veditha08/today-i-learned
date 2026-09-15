@@ -44,3 +44,25 @@ Benefits:
 - Consistent testing
 - Faster, reliable deployments
 - Audit trail of changes
+
+## Cloud Computing
+
+Service Models:
+IaaS (Infrastructure as a Service): VMs, storage, networking - AWS EC2, Azure VM
+PaaS (Platform as a Service): Managed runtime - Heroku, Google App Engine
+SaaS (Software as a Service): Ready-to-use software - Gmail, Slack
+
+AWS Key Services:
+EC2: virtual servers on demand
+S3: scalable object storage
+RDS: managed relational database
+Lambda: serverless compute (pay per invocation)
+CloudFront: CDN for fast content delivery
+Route 53: DNS service
+VPC: isolated virtual network
+
+Serverless Benefits:
+- No server management
+- Auto-scaling
+- Pay per use
+- Event-driven architecture
