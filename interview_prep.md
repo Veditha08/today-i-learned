@@ -36,3 +36,28 @@ Prepare 5-6 solid stories covering:
 - Technical challenge solved
 - Failure and learning
 - Working under pressure
+
+## Quick Revision Checklist
+
+Data Structures:
+- Arrays, Strings
+- Linked List (singly, doubly, circular)
+- Stack, Queue, Deque
+- Trees: BST, AVL, Heap, Trie
+- Graph: adjacency list/matrix
+- Hash Map, Hash Set
+
+Algorithms:
+- Sorting: merge, quick, heap
+- Searching: binary search variants
+- Graph: BFS, DFS, Dijkstra, Kruskal
+- DP: knapsack, LCS, LIS, coin change
+- Backtracking: subsets, permutations
+
+CS Fundamentals:
+- OS: processes vs threads, deadlock, scheduling
+- DBMS: ACID, transactions, normalization, indexing
+- Networks: HTTP, TCP/IP, DNS, TLS
+- System Design: scalability, caching, load balancing, CAP
+
+Keep practicing! Consistency > intensity.
